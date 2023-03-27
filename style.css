@@ -1,0 +1,103 @@
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    background-image: url(ground.jpg);
+    background-size: cover;
+  }
+  
+  .bg {
+    animation:slide 2s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(0, 94, 218,0.9) 50%, rgb(231, 197, 0,0.9) 40%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:3s;
+  }
+  
+  .bg3 {
+    animation-duration:4s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .text {
+    font-size: 220px;
+    color: #ffffff;
+    font-family: Arial Black, Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(195,195,195),
+                 1px 1px 0 rgb(189,189,189),
+                 2px 2px 0 rgb(184,184,184),
+                 3px 3px 0 rgb(178,178,178),
+                 4px 4px 0 rgb(173,173,173),
+                 5px 5px 0 rgb(167,167,167),
+                 6px 6px 0 rgb(162,162,162),
+                 7px 7px 0 rgb(156,156,156),
+                 8px 8px 0 rgb(151,151,151),
+                 9px 9px 0 rgb(145,145,145),
+                 10px 10px  0 rgb(140,140,140),
+                 11px 11px 10px rgba(69,69,69,0.93),
+                 11px 11px 1px rgba(69,69,69,0.5),
+                 0px 0px 10px rgba(69,69,69,.2);
+    animation-name: four;
+    animation-duration: 2s;
+    transform: scale(0);
+ }
+
+
+@keyframes four{
+    from{
+        transform: scale(0);
+        opacity: 1;
+    }
+    to{
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+@keyframes backgrounds{
+    from{
+        opacity: .5;
+    }
+    to{
+        opacity: 0;
+    }
+}
